@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZH0-R7-jQ3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableViewAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BQY-uj-17l">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="testCell" id="f58-9p-LKU">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f58-9p-LKU" id="OMB-I3-eiS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fnB-RS-pxS"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RaC-eT-Cyf"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1e-BN-hKG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i5u-IL-vze">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMs-E5-EEO">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="44"/>
+                                                <state key="normal" title="淡入"/>
+                                                <connections>
+                                                    <action selector="fadeInBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Jw-d8-7gj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quX-W6-y0P">
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="44"/>
+                                                <state key="normal" title="弹簧"/>
+                                                <connections>
+                                                    <action selector="damplingBtnAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="3wK-Et-ajP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctq-UR-6FY">
+                                                <rect key="frame" x="187.5" y="0.0" width="94" height="44"/>
+                                                <state key="normal" title="侧入"/>
+                                                <connections>
+                                                    <action selector="leftBtnAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="96E-tH-j1K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXc-rS-yUn">
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="44"/>
+                                                <state key="normal" title="弹簧淡入"/>
+                                                <connections>
+                                                    <action selector="fadeAndDampingBtnAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="1NN-KU-Wbg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5px-VM-ren"/>
+                                    <constraint firstAttribute="bottom" secondItem="i5u-IL-vze" secondAttribute="bottom" id="FlA-Vd-vZW"/>
+                                    <constraint firstItem="i5u-IL-vze" firstAttribute="top" secondItem="Q1e-BN-hKG" secondAttribute="top" id="Pgt-0Z-dai"/>
+                                    <constraint firstAttribute="trailing" secondItem="i5u-IL-vze" secondAttribute="trailing" id="R31-c2-awT"/>
+                                    <constraint firstItem="i5u-IL-vze" firstAttribute="leading" secondItem="Q1e-BN-hKG" secondAttribute="leading" id="lUH-gC-M8e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q1e-BN-hKG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3ub-qC-vIy"/>
+                            <constraint firstItem="Q1e-BN-hKG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9A8-Kc-Klx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BQY-uj-17l" secondAttribute="trailing" id="Jtt-po-286"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q1e-BN-hKG" secondAttribute="trailing" id="U2X-eb-VSl"/>
+                            <constraint firstItem="BQY-uj-17l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p9n-Rv-5Dg"/>
+                            <constraint firstItem="BQY-uj-17l" firstAttribute="top" secondItem="Q1e-BN-hKG" secondAttribute="bottom" id="pki-YZ-LCX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BQY-uj-17l" secondAttribute="bottom" id="sTC-xT-B2e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EWh-pd-m7E"/>
+                    <connections>
+                        <outlet property="tableView" destination="BQY-uj-17l" id="lKn-Z2-G1g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="-672.41379310344837"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ReH-jj-hEC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZH0-R7-jQ3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7HO-cF-WjX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="di0-zL-4n4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRp-e0-5bV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="-672.41379310344837"/>
+        </scene>
+    </scenes>
+</document>
